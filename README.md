@@ -160,7 +160,9 @@ max/min/mean/std_eta
 </table>
 
 ## Algorithm
-1. Light GBM 
+### Light GBM 
+Hyperpamaters are tuned in an iterative manner based on the model performance on validation and test set. The best set of hyperparameters are listed below.
+
 params = {'boosting_type': 'gbdt',
  'objective': 'binary',
  'num_leaves': 31,
@@ -174,7 +176,8 @@ params = {'boosting_type': 'gbdt',
  'reg_alpha':7.5,
  'reg_lambda':2}
  
-2. Deep FM
+###  Deep FM
+This network structure emphasizes both low and high order feature interactions, and requires minimal feature engineering. 
 - Link to paper: [https://arxiv.org/abs/1703.04247](https://arxiv.org/abs/1703.04247)
 <p align="center">
   <img src="./figure/deepfm.png" width="600" title="Wide & deep architecture of DeepFM">
@@ -188,4 +191,4 @@ The network is built with Tensorflow and Keras with the following steps:
 
 
 # Results
-The best score of our team is a weighted f1 score of 0.69693201 on test set.
+The best result of our team has a weighted f1 score of **0.69693201** on test set.
