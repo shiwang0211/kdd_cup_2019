@@ -160,7 +160,7 @@ max/min/mean/std_eta
 </table>
 
 ## Algorithm
-### Light GBM 
+### [Light GBM](https://github.com/shiwang0211/kdd_cup_2019/blob/master/Feature%20Engineering%20and%20LGB.ipynb)
 Hyperpamaters are tuned in an iterative manner based on the model performance on validation and test set. The best set of hyperparameters are listed below.
 
 params = {'boosting_type': 'gbdt',
@@ -176,14 +176,14 @@ params = {'boosting_type': 'gbdt',
  'reg_alpha':7.5,
  'reg_lambda':2}
  
-###  Deep FM
+###  [Deep FM](https://github.com/shiwang0211/kdd_cup_2019/blob/master/Deep-FM.ipynb)
 This network structure emphasizes both low and high order feature interactions, and requires minimal feature engineering. 
 - Link to paper: [https://arxiv.org/abs/1703.04247](https://arxiv.org/abs/1703.04247)
 <p align="center">
   <img src="./figure/deepfm.png" width="600" title="Wide & deep architecture of DeepFM">
 </p>
 
-The network is built with Tensorflow and Keras with the following steps:
+The network is built from scratch with Tensorflow and Keras with the following steps:
 - Define 1st order Factorization Machine layer
 - Define 2nd order Factorization Machine layer
 - Define Deep NN layers
